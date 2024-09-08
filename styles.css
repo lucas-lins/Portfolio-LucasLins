@@ -1,5 +1,25 @@
 /* Importa a fonte Chakra Petch do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+header {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+
+    background-color: #072541;
+}
+
+.header-content {
+    display: flex; /* Organiza a imagem e o texto lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 30px; /* Espaçamento entre a imagem e o texto */
+}
 
 /* Estiliza o corpo da página */
 body {
@@ -16,10 +36,21 @@ body {
 
 /* Estiliza os títulos h1 */
 h1 {
+    font-family: "Bebas Neue", sans-serif;
     font-size: 2.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
-    text-align: center; /* Alinha o texto ao centro */
+    color: #de6f7f; /* Cor do texto */
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
+    margin: 0.2rem;
+}
+
+h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+
+
+h3 {
+    margin-top: 0.2rem;
 }
 
 /* Estiliza as seções da página */
@@ -58,6 +89,27 @@ section button:hover {
     background-color: #30475E; /* Muda a cor de fundo ao passar o mouse */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
 }
+
+.profile-image {
+    flex: 1.5; /* A imagem ocupará 1.5x mais espaço que o texto */
+    max-width: 300px; /* Limita o tamanho máximo da imagem */
+    width: 250px;
+    aspect-ratio: 1/1;
+    border-radius: 50%; /* Cria o efeito circular */
+    overflow: hidden;
+}
+  
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-content {
+    flex: 1;
+    color: #FBECB2;
+}
+
 
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {

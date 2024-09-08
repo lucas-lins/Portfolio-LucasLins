@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>
-        Primeiro projeto
+        Lucas Lins
     </title>
     <style>
         html, body {
@@ -24,7 +24,12 @@
             justify-content: flex-start;
         }
 
-        header, footer {
+        header {
+            text-align:left;
+            width: 100%;
+        }
+
+        footer {
             text-align: center;
             width: 100%;
         }
@@ -38,18 +43,26 @@
 
 <body>
     <header>
-        <h1>
-            Cabeçalho da página h1
-        </h1>            
+        <div class="header-content">
+            <div class="profile-image">
+                <img src="foto.jpg" alt="Sua Foto">
+            </div>
+            
+            <div class="text-content">
+                <h2>Hello there! My name is Lucas Lins P. da Silva</h2>
+                <h1>but you can call me just Lins</h1>
+                <h3>Computer science student | Software tester | Developer</h3>
+    
+                <p>Growing up, I was always curious about how things worked, leading me to pursue a passion for science and technology. Now, I'm a Computer Science student and researcher at UFRPE.</p>
+    
+                <p>With 2 years of experience in manual testing, I've honed my skills in test automation using Cypress and creating reports, metrics, and quality indicators.</p>
+    
+                <p>Proficient in C and C++, I'm currently diving into front-end development with HTML, CSS, and JavaScript. In my free time, I enjoy developing games in Unity.</p>
+            </div> 
+        </div>       
     </header>
 
     <main>
-        <section>
-            <div class="content">
-                <input type="text" placeholder="Pesquisa">
-                <button>Botão</button>
-            </div>
-        </section>
         <section class="resultados-pesquisa">
             <div class="item-resultado">
                 <h2>Texto</h2>
