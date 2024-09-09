@@ -11,14 +11,14 @@ header {
     justify-content: center;
     padding: 0 50px;
     box-sizing: border-box;
-
     background-color: #072541;
 }
 
 .header-content {
     display: flex; /* Organiza a imagem e o texto lado a lado */
-    align-items: center; /* Centraliza verticalmente */
-    gap: 30px; /* Espaçamento entre a imagem e o texto */
+    align-content: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Distribui espaço entre os blocos */
+    gap: 0px; /* Espaçamento entre a imagem e o texto */
 }
 
 /* Estiliza o corpo da página */
@@ -81,14 +81,14 @@ section button {
     border: none; /* Remove a borda padrão */
     border-radius: 1.5rem; /* Borda arredondada */
     background-color: #072541; /* Cor de fundo do botão */
-    color: #F5F7F8; /* Cor do texto do botão */
+    color: #ffffff; /* Cor do texto do botão */
     font-size: 1rem; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
 
 /* Adiciona efeito hover ao botão de pesquisa */
 section button:hover {
-    background-color: #30475E; /* Muda a cor de fundo ao passar o mouse */
+    background-color: #3c6489; /* Muda a cor de fundo ao passar o mouse */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
 }
 
@@ -97,10 +97,11 @@ section button:hover {
     max-width: 300px; /* Limita o tamanho máximo da imagem */
     width: 250px;
     aspect-ratio: 1/1; /* Mantém a imagem quadrada */
-    border-radius: 0.6rem; /* Define bordas arredondadas */
-    padding: 50px;
+    border-radius: 30%; /* Define bordas arredondadas */
+    padding: 20px;
     overflow: hidden;
-}
+    margin-top: 15px;
+}  
   
 .profile-image img {
     width: 100%;
@@ -118,15 +119,13 @@ section button:hover {
     flex-direction: row;
     margin-top: 1rem;
     padding: 1rem;
-    
 }
 
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
     width: 60rem; /* Largura máxima da caixa de resultados */
     height: 46vh; /* Altura máxima da caixa de resultados */
-    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
-    margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
+    margin-top: -3rem; /* Espaçamento acima da caixa de resultados */
     padding: 1rem; /* Espaçamento interno */
     border-radius: 0.6rem; /* Borda arredondada */
 }
@@ -139,7 +138,7 @@ section button:hover {
     border-radius: 0.6rem; /* Borda arredondada */
     padding: 1rem; /* Espaçamento interno */
     margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
 .imagem-projeto {
@@ -151,15 +150,6 @@ section button:hover {
     border-radius: 50%
 }
 
-.profile-image {
-    flex: 1.5; /* A imagem ocupará 1.5x mais espaço que o texto */
-    max-width: 300px; /* Limita o tamanho máximo da imagem */
-    width: 250px;
-    aspect-ratio: 1/1;
-    border-radius: 50%; /* Cria o efeito circular */
-    overflow: hidden;
-}
-  
 
 .info-projeto {
     flex: 1;
@@ -186,6 +176,27 @@ section button:hover {
 .descricao-meta {
     color: #45474B; /* Cor do texto */
     margin: 0.5rem 0; /* Margem acima e abaixo */
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+}
+
+.icon-container a {
+    text-decoration: none;
+    color: #FBECB2;
+    font-size: 25px;
+    margin: 20px 2px;
+
+}
+
+.icon-container a:hover {
+    transform: scale(1.1); /* Pequena animação ao passar o mouse */
+    color: #de6f7f; /* Cor ao passar o mouse (pode mudar para cada ícone) */
+    transition: 0.3s;
 }
 
 /* Estiliza o rodapé da página */
