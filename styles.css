@@ -94,8 +94,9 @@ section button:hover {
     flex: 1.5; /* A imagem ocupará 1.5x mais espaço que o texto */
     max-width: 300px; /* Limita o tamanho máximo da imagem */
     width: 250px;
-    aspect-ratio: 1/1;
-    border-radius: 50%; /* Cria o efeito circular */
+    aspect-ratio: 1/1; /* Mantém a imagem quadrada */
+    border-radius: 15px 50px; /* Define bordas arredondadas */
+    padding: 50px;
     overflow: hidden;
 }
   
@@ -123,11 +124,36 @@ section button:hover {
 
 /* Estiliza cada item de resultado */
 .item-resultado {
+    display: flex;
+    align-items: center;
     background: #FFFFFF; /* Cor de fundo dos itens */
     border-radius: 0.6rem; /* Borda arredondada */
     padding: 1rem; /* Espaçamento interno */
     margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.imagem-projeto {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    margin-right: 1rem;
+    border-radius: 50%
+}
+
+.profile-image {
+    flex: 1.5; /* A imagem ocupará 1.5x mais espaço que o texto */
+    max-width: 300px; /* Limita o tamanho máximo da imagem */
+    width: 250px;
+    aspect-ratio: 1/1;
+    border-radius: 50%; /* Cria o efeito circular */
+    overflow: hidden;
+}
+  
+
+.info-projeto {
+    flex: 1;
 }
 
 /* Estiliza os títulos dentro dos itens de resultado */
