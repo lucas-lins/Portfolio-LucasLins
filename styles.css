@@ -59,11 +59,12 @@ section {
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
     margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
+    justify-content: space-between;
 }
 
 /* Estiliza os inputs dentro das seções */
 section input {
-    width: 30rem; /* Largura dos inputs */
+    width: 200px; /* Largura dos inputs */
     border: none; /* Remove a borda padrão */
     padding: 1rem; /* Espaçamento interno */
     border-radius: 1.5rem; /* Borda arredondada */
@@ -75,10 +76,11 @@ section input {
 
 /* Estiliza os botões dentro das seções */
 section button {
-    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
+    width: 200px;
+    padding: 0.8rem 4rem; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
     border-radius: 1.5rem; /* Borda arredondada */
-    background-color: #30475E; /* Cor de fundo do botão */
+    background-color: #072541; /* Cor de fundo do botão */
     color: #F5F7F8; /* Cor do texto do botão */
     font-size: 1rem; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
@@ -95,7 +97,7 @@ section button:hover {
     max-width: 300px; /* Limita o tamanho máximo da imagem */
     width: 250px;
     aspect-ratio: 1/1; /* Mantém a imagem quadrada */
-    border-radius: 15px 50px; /* Define bordas arredondadas */
+    border-radius: 0.6rem; /* Define bordas arredondadas */
     padding: 50px;
     overflow: hidden;
 }
@@ -111,6 +113,13 @@ section button:hover {
     color: #FBECB2;
 }
 
+.buttons-align {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    padding: 1rem;
+    
+}
 
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
