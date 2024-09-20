@@ -165,6 +165,7 @@ section input {
 
 /* Estiliza os botões dentro das seções */
 section button {
+    margin-top: 80px;
     width: 200px;
     padding: 0.8rem 4rem; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
