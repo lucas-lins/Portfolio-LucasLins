@@ -2,55 +2,144 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+body {
+    background-color: #081b29;
+    font-family: "Chakra Petch", sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
 
 header {
-    text-align: left;
+    position: fixed;
+    top: 0;
+    width: 80%;
+    padding: 20px 5%;
+    height: 60px;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    padding: 0 50px;
-    box-sizing: border-box;
-    background-color: #072541;
+    z-index: 100;
+    overflow-x: hidden;
 }
 
-.header-content {
-    display: flex; /* Organiza a imagem e o texto lado a lado */
-    align-content: center; /* Centraliza verticalmente */
-    justify-content: space-between; /* Distribui espaço entre os blocos */
-    gap: 0px; /* Espaçamento entre a imagem e o texto */
+
+.name {
+    position: relative;
+    font-size: 25px;
+    color: #d8d46c;
+    text-decoration: none;
+    font-weight: 600;
 }
+
+.navbar {
+    display: flex;
+    margin-left: auto;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #d8d46c;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #de6f7f;
+}
+
+/*
+.header-content {
+    display: flex; /*Organiza a imagem e o texto lado a lado
+    align-content: center; /*Centraliza verticalmente
+    justify-content: space-between; /*Distribui espaço entre os blocos
+    gap: 0px; /*Espaçamento entre a imagem e o texto
+}
+*/
 
 /* Estiliza o corpo da página */
-body {
-    font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #DDDDDD; /* Cor de fundo da página */
-    display: flex; /* Usa Flexbox para layout */
-    flex-direction: column; /* Alinha os itens na vertical */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens verticalmente */
-    height: 100vh; /* Preenche a altura total da viewport */
-    margin: 0; /* Remove a margem padrão */
-    padding: 0; /* Remove o padding padrão */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    height: 100vh;
+    font-family: "Chakra Petch", sans-serif;
 }
 
-/* Estiliza os títulos h1 */
-h1 {
+.profile-image {
+    flex: 1.5;
+    max-width: 430px; /*Limita o tamanho máximo da imagem */
+    width: 250px;
+    aspect-ratio: 1/1; 
+    border-radius: 30%; /* Define bordas arredondadas */
+    overflow: hidden;
+    margin-right: 2rem;
+}  
+  
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
     font-family: "Bebas Neue", sans-serif;
-    font-size: 2.5rem; /* Tamanho da fonte */
-    color: #de6f7f; /* Cor do texto */
-    letter-spacing: 0.4rem; /* Espaçamento entre letras */
-    margin: 0.2rem;
-}
-
-h2 {
-    margin-top: 1.5rem;
+    font-size: 3.7rem;
+    color: #d8d46c;
     margin-bottom: 0.2rem;
+    margin-top: 0.3rem;
+    
+    animation:
+        typing 3.5s steps(30, end),
+        blink-caret .75s step-end infinite;
+
+    overflow: hidden;
+    border-right: .15em solid #d8d46c;
+    white-space: nowrap;
 }
 
-
-h3 {
+.home-content h2 {
+    font-size: 1.6rem;
+    color: #de6f7f;
+    margin-bottom: 0.2rem;
     margin-top: 0.2rem;
+
+    animation:
+    typing 3.5s steps(30, end),
+    blink-caret .75s step-end infinite;
+
+    overflow: hidden;
+    border-right: .15em solid #d8d46c;
+    white-space: nowrap;
+    
+}
+
+.home-content h3 {
+    font-size: 1.3rem;
+    color: #de6f7f;
+    margin-bottom: 0.2rem;
+    margin-top: 0.1rem;
+
+    animation:
+    typing 3.5s steps(30, end),
+    blink-caret .75s step-end infinite;
+
+    overflow: hidden;
+    border-right: .15em solid #d8d46c;
+    white-space: nowrap;
+}
+
+.paragraph {
+    color: #d8d46c;
+    font-size: 1rem;
 }
 
 /* Estiliza as seções da página */
@@ -92,28 +181,6 @@ section button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
 }
 
-.profile-image {
-    flex: 1.5; /* A imagem ocupará 1.5x mais espaço que o texto */
-    max-width: 300px; /* Limita o tamanho máximo da imagem */
-    width: 250px;
-    aspect-ratio: 1/1; /* Mantém a imagem quadrada */
-    border-radius: 30%; /* Define bordas arredondadas */
-    padding: 20px;
-    overflow: hidden;
-    margin-top: 15px;
-}  
-  
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.text-content {
-    flex: 1;
-    color: #FBECB2;
-}
-
 .buttons-align {
     display: flex;
     flex-direction: row;
@@ -125,7 +192,7 @@ section button:hover {
 .resultados-pesquisa {
     width: 60rem; /* Largura máxima da caixa de resultados */
     height: 46vh; /* Altura máxima da caixa de resultados */
-    margin-top: -3rem; /* Espaçamento acima da caixa de resultados */
+    margin-top: 2rem; /* Espaçamento acima da caixa de resultados */
     padding: 1rem; /* Espaçamento interno */
     border-radius: 0.6rem; /* Borda arredondada */
 }
@@ -149,7 +216,6 @@ section button:hover {
     margin-right: 1rem;
     border-radius: 50%
 }
-
 
 .info-projeto {
     flex: 1;
@@ -180,85 +246,78 @@ section button:hover {
 
 .icon-container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    gap: 0px;
+    gap: 50px;
 }
 
 .icon-container a {
-    text-decoration: none;
-    color: #FBECB2;
+    color: #d8d46c;
     font-size: 25px;
-    margin: 20px 2px;
-
+    transition: transform 0.3;
 }
 
 .icon-container a:hover {
-    transform: scale(1.1); /* Pequena animação ao passar o mouse */
-    color: #de6f7f; /* Cor ao passar o mouse (pode mudar para cada ícone) */
-    transition: 0.3s;
+    transform: scale(1.5); /*Animação com mouse*/
+    color: #de6f7f; /*Cor com mouse*/
 }
 
 /* Estiliza o rodapé da página */
 footer {
-    background-color: #F5F7F8; /* Cor de fundo do rodapé */
-    color: #45474B; /* Cor do texto */
-    text-align: center; /* Alinha o texto ao centro */
-    padding: 0; /* Espaçamento interno */
-    width: 100%; /* Largura total da página */
-    position: absolute; /* Posiciona o rodapé */
+    position: fixed; /* Posiciona o rodapé */
     bottom: 0; /* Alinha ao fundo da página */
+    width: 100%; /* Largura total da página */
+    padding: 1rem; /* Espaçamento interno */
+    height: 60px;
+    background: transparent; /* Cor de fundo do rodapé */
+    color: #FFFFFF; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
     font-size: 1rem; /* Tamanho da fonte */
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem; /* Tamanho da fonte em telas menores */
-        letter-spacing: 0.2rem; /* Espaçamento entre letras em telas menores */
-    }
-
-    section input {
-        width: 25rem; /* Largura dos inputs em telas menores */
-        padding: 0.8rem; /* Espaçamento interno em telas menores */
-    }
-
-    .resultados-pesquisa {
-        width: 40rem; /* Largura da caixa de resultados em telas menores */
-        height: 40vh; /* Altura da caixa de resultados em telas menores */
-    }
-
-    .item-resultado h2 {
-        font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
-    }
+/* Animação */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
 }
 
-/* Responsividade para celulares */
+/* efeito cursor */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #d8d46c; }
+}
+
+/*Responsividade*/
+@media (max-width: 768px) {
+    body {
+        overflow: scroll;
+    }
+    
+    .home{
+        flex-direction: column;
+        padding: 0 5%;
+    }
+
+    .home-content h1{
+        font-size: 2rem;
+    }
+
+    .home-content h2{
+        font-size: 1.5rem;
+    }
+
+    
+    .home-content h3{
+        font-size: 1.5rem;
+    }
+
+}
+
 @media (max-width: 480px) {
-
-    h1 {
-        font-size: 1.8rem; /* Tamanho da fonte em telas pequenas */
-        letter-spacing: 0.1rem; /* Espaçamento entre letras em telas pequenas */
+    body {
+        overflow: scroll;
     }
 
-    section input {
-        width: 17rem; /* Largura total dos inputs em telas pequenas */
-    }
-
-    section button {
-        padding: 0.6rem 1rem; /* Espaçamento interno do botão em telas pequenas */
-        font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
-    }
-
-    .resultados-pesquisa {
-        width: 90%; /* Largura da caixa de resultados em telas pequenas */
-        height: 50vh; /* Altura da caixa de resultados em telas pequenas */
-    }
-
-    .item-resultado h2 {
-        font-size: 1.1rem; /* Tamanho da fonte dos títulos em telas pequenas */
-    }
-
-    footer {
-        font-size: 0.9rem; /* Tamanho da fonte do rodapé em telas pequenas */
+    .home-content h1 {
+        font-size: 1.8rem;
     }
 }
