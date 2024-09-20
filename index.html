@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>
-        Lucas Lins
-    </title>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-
-        .wrapper {
-            min-height: 100%;
-            padding-bottom: 100px;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-
-        header {
-            text-align:left;
-            width: 100%;
-        }
-
-        footer {
-            text-align: center;
-            width: 100%;
-        }
-
-        .content {
-            flex: 1; /* Ocupa o espaço restante */
-        }
-
-    </style>
+    <title>Lucas Lins</title>
 </head>
 
 <body>
-    <header>
+
+    <header class="header">
+        <a href="#" class="name">Lucas Lins</a>
+
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="home">
+        <div class="profile-image">
+            <img src="images/foto.jpg" alt="Sua Foto">
+        </div>
+        
+        <div class="home-content">
+            <h2>Hello there! My name is Lucas Lins P. da Silva</h2>
+            <h1>but you can call me just Lins</h1>
+            <h3>Computer science student | Software tester | Developer</h3>
+
+            <p class="paragraph">Growing up, I was always curious about how things worked, leading me to pursue a passion for science and technology. Now, I'm a Computer Science student and researcher at UFRPE.</p>
+
+            <p class="paragraph">With 2 years of experience in manual testing, I've honed my skills in test automation using Cypress and creating reports, metrics, and quality indicators.</p>
+
+            <p class="paragraph">Proficient in C and C++, I'm currently diving into front-end development with HTML, CSS, and JavaScript. In my free time, I enjoy developing games in Unity.</p>
+        </div>
+    </div>
+
+
+    <!--  Trecho de busca de projetos
+    <section class="buttons-align">
+        <button onclick="buscaProjetos()">Projects</button>
+        <button onclick="buscaPesquisas()">Researches</button>
+        <button onclick="buscaTudo()">All</button>
+    </section>
+
+    <section class="resultados-pesquisa"id="resultados-pesquisa"></section>
+    -->
+
+
+    <footer>
         <div class="icon-container">
             <a href="mailto:lucaslins.link@gmail.com" target="_blank">
                 <i class="fas fa-envelope"></i>
@@ -59,36 +67,8 @@
                 <i class="fas fa-graduation-cap"></i>
             </a>
         </div>
-        <div class="header-content">
-            <div>
-                <div class="profile-image">
-                    <img src="images/foto.jpg" alt="Sua Foto">
-                </div>
-            </div>
-            
-            <div class="text-content">
-                <h2>Hello there! My name is Lucas Lins P. da Silva</h2>
-                <h1>but you can call me just Lins</h1>
-                <h3>Computer science student | Software tester | Developer</h3>
-    
-                <p>Growing up, I was always curious about how things worked, leading me to pursue a passion for science and technology. Now, I'm a Computer Science student and researcher at UFRPE.</p>
-    
-                <p>With 2 years of experience in manual testing, I've honed my skills in test automation using Cypress and creating reports, metrics, and quality indicators.</p>
-    
-                <p>Proficient in C and C++, I'm currently diving into front-end development with HTML, CSS, and JavaScript. In my free time, I enjoy developing games in Unity.</p>
-            </div>           
-        </div>       
-    </header>
+    </footer>
 
-    <main>
-        <section class="buttons-align">
-            <button onclick="buscaProjetos()">Projects</button>
-            <button onclick="buscaPesquisas()">Researches</button>
-            <button onclick="buscaTudo()">All</button>
-        </section>
-
-        <section class="resultados-pesquisa"id="resultados-pesquisa"></section> 
-    </main>
 
     <script src="portfolio.js"></script>
     <script src="app.js"></script>
