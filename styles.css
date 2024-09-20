@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 body {
-    background-color: #081b29;
+    background-color: #192428;
     font-family: "Chakra Petch", sans-serif;
     margin: 0;
 }
@@ -14,7 +14,7 @@ header {
     width: 80%;
     padding: 20px 5%;
     height: 60px;
-    background: #081b29;
+    background: #192428;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,7 +26,7 @@ header {
 .name {
     position: relative;
     font-size: 25px;
-    color: #d8d46c;
+    color: #39ace7;
     text-decoration: none;
     font-weight: 600;
 }
@@ -38,7 +38,7 @@ header {
 
 .navbar a {
     font-size: 18px;
-    color: #d8d46c;
+    color: #f5f5f5;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
@@ -47,7 +47,7 @@ header {
 
 .navbar a:hover,
 .navbar a.active {
-    color: #de6f7f;
+    color: #39ace7;
 }
 
 /*
@@ -74,7 +74,7 @@ header {
     max-width: 430px; /*Limita o tamanho máximo da imagem */
     width: 250px;
     aspect-ratio: 1/1; 
-    border-radius: 30%; /* Define bordas arredondadas */
+    border-radius: 20%; /* Define bordas arredondadas */
     overflow: hidden;
     margin-right: 2rem;
 }  
@@ -92,38 +92,21 @@ header {
 .home-content h1 {
     font-family: "Bebas Neue", sans-serif;
     font-size: 3.7rem;
-    color: #d8d46c;
+    color: #f5f5f5;
     margin-bottom: 0.2rem;
     margin-top: 0.3rem;
-    
-    animation:
-        typing 3.5s steps(30, end),
-        blink-caret .75s step-end infinite;
-
-    overflow: hidden;
-    border-right: .15em solid #d8d46c;
-    white-space: nowrap;
 }
 
 .home-content h2 {
     font-size: 1.6rem;
-    color: #de6f7f;
+    color: #39ace7;
     margin-bottom: 0.2rem;
-    margin-top: 0.2rem;
-
-    animation:
-    typing 3.5s steps(30, end),
-    blink-caret .75s step-end infinite;
-
-    overflow: hidden;
-    border-right: .15em solid #d8d46c;
-    white-space: nowrap;
-    
+    margin-top: 0.2rem;    
 }
 
 .home-content h3 {
     font-size: 1.3rem;
-    color: #de6f7f;
+    color: #39ace7;
     margin-bottom: 0.2rem;
     margin-top: 0.1rem;
 
@@ -132,12 +115,12 @@ header {
     blink-caret .75s step-end infinite;
 
     overflow: hidden;
-    border-right: .15em solid #d8d46c;
+    border-right: .15em solid #f5f5f5;
     white-space: nowrap;
 }
 
 .paragraph {
-    color: #d8d46c;
+    color: #f5f5f5;
     font-size: 1rem;
 }
 
@@ -169,15 +152,15 @@ section button {
     padding: 0.8rem 4rem; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
     border-radius: 1.5rem; /* Borda arredondada */
-    background-color: #072541; /* Cor de fundo do botão */
-    color: #ffffff; /* Cor do texto do botão */
+    background-color: #414c50; /* Cor de fundo do botão */
+    color: #f5f5f5; /* Cor do texto do botão */
     font-size: 1rem; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
 
 /* Adiciona efeito hover ao botão de pesquisa */
 section button:hover {
-    background-color: #3c6489; /* Muda a cor de fundo ao passar o mouse */
+    background-color: #39ace7; /* Muda a cor de fundo ao passar o mouse */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
 }
 
@@ -186,27 +169,27 @@ section button:hover {
     flex-direction: row;
     margin-top: 1rem;
     padding: 1rem;
+    gap: 10rem;
 }
 
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
     width: 60rem; /* Largura máxima da caixa de resultados */
-    height: 46vh; /* Altura máxima da caixa de resultados */
     margin-top: 2rem; /* Espaçamento acima da caixa de resultados */
     padding: 1rem; /* Espaçamento interno */
     border-radius: 0.6rem; /* Borda arredondada */
-    margin-bottom: 15rem;
+    margin-bottom: 5rem;
 }
 
 /* Estiliza cada item de resultado */
 .item-resultado {
     display: flex;
     align-items: center;
-    background: #27374D; /* Cor de fundo dos itens */
+    background: #2d383c; /* Cor de fundo dos itens */
     border-radius: 0.6rem; /* Borda arredondada */
     padding: 1rem; /* Espaçamento interno */
     margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
-    box-shadow: rgba(143, 157, 163, 0.336) 0px 2px 4px 0px, rgba(101, 126, 136, 0.549) 0px 2px 16px 0px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .imagem-projeto {
@@ -215,7 +198,8 @@ section button:hover {
     object-fit: cover;
     aspect-ratio: 1/1;
     margin-right: 1rem;
-    border-radius: 50%
+    margin-left: 1rem;
+    border-radius: 20%
 }
 
 .info-projeto {
@@ -225,13 +209,15 @@ section button:hover {
 /* Estiliza os títulos dentro dos itens de resultado */
 .item-resultado h2 {
     font-size: 1.5rem; /* Tamanho da fonte */
-    color: #de6f7f; /* Cor do texto */
+    color: #39ace7; /* Cor do texto */
+    margin-right: 2rem;
+    margin-left: 1rem;
 }
 
 /* Estiliza os links dentro dos itens de resultado */
 .item-resultado a {
     text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #de6f7f; /* Cor do texto dos links */
+    color: #39ace7; /* Cor do texto dos links */
 }
 
 /* Estiliza os links quando são passados o mouse sobre */
@@ -241,8 +227,17 @@ section button:hover {
 
 /* Estiliza a descrição meta dentro dos itens de resultado */
 .descricao-meta {
-    color: #d8d46c; /* Cor do texto */
+    color: #f5f5f5; /* Cor do texto */
     margin: 0.5rem 0; /* Margem acima e abaixo */
+    margin-right: 2rem;
+    margin-left: 1rem;
+}
+
+.icon-group {
+    display: flex;
+    flex-direction: column; /* Organiza os ícones um acima do outro */
+    gap: 10px; /* Espaçamento vertical entre os ícones */
+    margin-top: 10px; /* Espaçamento entre os ícones e a descrição */
 }
 
 .icon-container {
@@ -252,14 +247,14 @@ section button:hover {
 }
 
 .icon-container a {
-    color: #d8d46c;
+    color: #f5f5f5;
     font-size: 25px;
     transition: transform 0.3;
 }
 
 .icon-container a:hover {
     transform: scale(1.5); /*Animação com mouse*/
-    color: #de6f7f; /*Cor com mouse*/
+    color: #39ace7; /*Cor com mouse*/
 }
 
 /* Estiliza o rodapé da página */
@@ -269,11 +264,12 @@ footer {
     width: 100%; /* Largura total da página */
     padding: 1rem; /* Espaçamento interno */
     height: 60px;
-    background: #081b29; /* Cor de fundo do rodapé */
+    background: #192428; /* Cor de fundo do rodapé */
     color: #FFFFFF; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     font-size: 1rem; /* Tamanho da fonte */
 }
+
 
 /* Animação */
 @keyframes typing {
@@ -284,7 +280,7 @@ footer {
 /* efeito cursor */
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: #d8d46c; }
+    50% { border-color: #f5f5f5; }
 }
 
 /*Responsividade*/
