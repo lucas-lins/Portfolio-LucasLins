@@ -1,6 +1,5 @@
 const section = document.getElementById('resultados-pesquisa');
 
-
 function buscaProjetos(limpar=true){
     if(limpar==true) section.innerHTML = '';
     for(let dado of projects){
