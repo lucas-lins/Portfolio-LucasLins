@@ -183,6 +183,8 @@ section button:hover {
 
 /* Estiliza cada item de resultado */
 .item-resultado {
+    opacity: 0; /* Começa invisível */
+    animation: fadeIn 1s ease forwards;
     display: flex;
     align-items: center;
     background: #2d383c; /* Cor de fundo dos itens */
@@ -268,8 +270,19 @@ footer {
     color: #FFFFFF; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     font-size: 1rem; /* Tamanho da fonte */
+    z-index: 100;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* Animação */
 @keyframes typing {
