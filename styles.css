@@ -6,7 +6,6 @@ body {
     background-color: #081b29;
     font-family: "Chakra Petch", sans-serif;
     margin: 0;
-    overflow: hidden;
 }
 
 header {
@@ -15,7 +14,7 @@ header {
     width: 80%;
     padding: 20px 5%;
     height: 60px;
-    background: transparent;
+    background: #081b29;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -196,17 +195,18 @@ section button:hover {
     margin-top: 2rem; /* Espaçamento acima da caixa de resultados */
     padding: 1rem; /* Espaçamento interno */
     border-radius: 0.6rem; /* Borda arredondada */
+    margin-bottom: 15rem;
 }
 
 /* Estiliza cada item de resultado */
 .item-resultado {
     display: flex;
     align-items: center;
-    background: #FFFFFF; /* Cor de fundo dos itens */
+    background: #27374D; /* Cor de fundo dos itens */
     border-radius: 0.6rem; /* Borda arredondada */
     padding: 1rem; /* Espaçamento interno */
     margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    box-shadow: rgba(143, 157, 163, 0.336) 0px 2px 4px 0px, rgba(101, 126, 136, 0.549) 0px 2px 16px 0px;
 }
 
 .imagem-projeto {
@@ -225,13 +225,13 @@ section button:hover {
 /* Estiliza os títulos dentro dos itens de resultado */
 .item-resultado h2 {
     font-size: 1.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
+    color: #de6f7f; /* Cor do texto */
 }
 
 /* Estiliza os links dentro dos itens de resultado */
 .item-resultado a {
     text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #30475E; /* Cor do texto dos links */
+    color: #de6f7f; /* Cor do texto dos links */
 }
 
 /* Estiliza os links quando são passados o mouse sobre */
@@ -241,7 +241,7 @@ section button:hover {
 
 /* Estiliza a descrição meta dentro dos itens de resultado */
 .descricao-meta {
-    color: #45474B; /* Cor do texto */
+    color: #d8d46c; /* Cor do texto */
     margin: 0.5rem 0; /* Margem acima e abaixo */
 }
 
@@ -269,7 +269,7 @@ footer {
     width: 100%; /* Largura total da página */
     padding: 1rem; /* Espaçamento interno */
     height: 60px;
-    background: transparent; /* Cor de fundo do rodapé */
+    background: #081b29; /* Cor de fundo do rodapé */
     color: #FFFFFF; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     font-size: 1rem; /* Tamanho da fonte */
