@@ -20,7 +20,7 @@ function buscaProjetos(limpar=true){
                 </div>
                 <div class="icon-container">
                     <a href=${dado.deploy} target="_blank">
-                        <i class="fa-solid fa-link""></i>
+                        <i class="fa-solid fa-link"></i>
                     </a>
                 </div>
             </div>
@@ -48,7 +48,7 @@ function buscaPesquisas(limpar=true){
                 </div>
                 <div class="icon-container">
                     <a href=${dado.lattes} target="_blank">
-                        <i class="fas fa-graduation-cap""></i>
+                        <i class="fas fa-graduation-cap"></i>
                     </a>
                 </div>
             </div>
