@@ -172,6 +172,11 @@ section button:hover {
     gap: 10rem;
 }
 
+.resume-button-below {
+    margin-top: 20px;
+    margin-bottom: 4rem;
+}
+
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
     width: 60rem; /* Largura máxima da caixa de resultados */
