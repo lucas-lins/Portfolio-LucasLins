@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lucas Lins</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="name">Lucas Lins</a>
+
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="#about">About me</a>
+            <a href="resume.html">Resume</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+    </header>
+
+    <footer>
+        <div class="icon-container">
+            <a href="mailto:lucaslins.link@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/lucas-lins" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/lucas-linspereira/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="http://lattes.cnpq.br/2826527629990948" target="_blank">
+                <i class="fas fa-graduation-cap"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-------CV------->
+    <section class="resume" id="resume">
+        <div class="buttons-align">
+            <button onclick="window.location.href='/Assets/pdfs/resume.pdf'">Download</button>
+        </div>
+
+        <embed src="/Assets/pdfs/Lucas Lins - Resume.pdf" width="800px" height="2100px" />
+        
+        <div class="buttons-align">
+            <button class="resume-button-below" onclick="window.location.href='/Assets/pdfs/resume.pdf'">Download</button>
+        </div>
+    </section>
+
+    <script src="portfolio.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>
