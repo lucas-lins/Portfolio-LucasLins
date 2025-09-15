@@ -2,68 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+@import "./header.css";
+
 body {
     background-color: #192428;
     font-family: "Chakra Petch", sans-serif;
     margin: 0;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    width: 80%;
-    padding: 20px 5%;
-    height: 60px;
-    background: #192428;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    overflow-x: hidden;
-}
-
-
-.name {
-    position: relative;
-    font-size: 25px;
-    color: #39ace7;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.navbar {
-    display: flex;
-    margin-left: auto;
-}
-
-.navbar a {
-    font-size: 18px;
-    color: #f5f5f5;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
-}
-
-.navbar a:hover,
-.navbar a.active {
-    color: #39ace7;
-}
-
-/*
-.header-content {
-    display: flex; /*Organiza a imagem e o texto lado a lado
-    align-content: center; /*Centraliza verticalmente
-    justify-content: space-between; /*Distribui espaço entre os blocos
-    gap: 0px; /*Espaçamento entre a imagem e o texto
-}
-*/
-
-/* Estiliza o corpo da página */
 .home {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
     padding: 0 10%;
     height: 100vh;
     font-family: "Chakra Petch", sans-serif;

@@ -1,0 +1,41 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 5%;
+    height: 60px;
+    background: #192428;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+
+.name {
+    position: relative;
+    font-size: 25px;
+    color: #39ace7;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    margin-left: auto;
+}
+
+.nav a {
+    font-size: 18px;
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: #39ace7;
+}
