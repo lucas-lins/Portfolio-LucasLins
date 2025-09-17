@@ -1,73 +1,34 @@
-/* Importa a fonte Chakra Petch do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import "./header.css";
+@import "./button.css";
+@import "./home.css";
+
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1;
+  --fundo: #141414;            /*Cor do background*/
+  --vermelho: #E50914;
+  --vermelho-escuro: #B20710;
+  --branco: #fff;              /*Usado quando passa o mouse em cima da seção e na tela atual da navbar*/
+  --branco-escuro: #e5e5e5;    /*Usado na em navbar e seções não selecionadas*/
+  --branco-foco: #b3b3b3;      /*Usado na navbar quando passa o mouse em cima*/
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
+
 
 body {
-    background-color: #192428;
-    font-family: "Chakra Petch", sans-serif;
+    background-color: #212121;
+    font-family: Inter, sans-serif;
     margin: 0;
 }
 
-.home {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 0 10%;
-    height: 100vh;
-    font-family: "Chakra Petch", sans-serif;
-}
 
-.profile-image {
-    flex: 1.5;
-    max-width: 430px; /*Limita o tamanho máximo da imagem */
-    width: 250px;
-    aspect-ratio: 1/1; 
-    border-radius: 20%; /* Define bordas arredondadas */
-    overflow: hidden;
-    margin-right: 2rem;
-}  
-  
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.home-content {
-    max-width: 600px;
-}
-
-.home-content h1 {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 3.7rem;
-    color: #f5f5f5;
-    margin-bottom: 0.2rem;
-    margin-top: 0.3rem;
-}
-
-.home-content h2 {
-    font-size: 1.6rem;
-    color: #39ace7;
-    margin-bottom: 0.2rem;
-    margin-top: 0.2rem;    
-}
-
-.home-content h3 {
-    font-size: 1.3rem;
-    color: #39ace7;
-    margin-bottom: 0.2rem;
-    margin-top: 0.1rem;
-
-    animation:
-    typing 3.5s steps(30, end),
-    blink-caret .75s step-end infinite;
-
-    overflow: hidden;
-    border-right: .15em solid #f5f5f5;
-    white-space: nowrap;
-}
 
 .paragraph {
     color: #f5f5f5;
@@ -94,6 +55,7 @@ section input {
     font-size: 1rem; /* Tamanho da fonte */
     box-sizing: border-box; /* Inclui padding e border na largura total */
 }
+
 
 /* Estiliza os botões dentro das seções */
 section button {
@@ -216,7 +178,7 @@ section button:hover {
 
 /* Estiliza o rodapé da página */
 footer {
-    position: fixed; /* Posiciona o rodapé */
+    position:relative; /* Posiciona o rodapé */
     bottom: 0; /* Alinha ao fundo da página */
     width: 100%; /* Largura total da página */
     padding: 1rem; /* Espaçamento interno */
