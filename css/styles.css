@@ -1,17 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @import "./header.css";
 @import "./button.css";
 @import "./home.css";
+@import "./experience.css";
+@import "./projects.css";
 
 :root {
   font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1;
-  --fundo: #141414;            /*Cor do background*/
-  --vermelho: #E50914;
-  --vermelho-escuro: #B20710;
-  --branco: #fff;              /*Usado quando passa o mouse em cima da seção e na tela atual da navbar*/
-  --branco-escuro: #e5e5e5;    /*Usado na em navbar e seções não selecionadas*/
-  --branco-foco: #b3b3b3;      /*Usado na navbar quando passa o mouse em cima*/
+  font-feature-settings: "liga" 1, "calt" 1;
+  --background: #121212; /*Cor do background*/
+  --modal: #1e1e1f;
+  --vermelho: #e50914;
+  --vermelho-escuro: #b20710;
+  --branco: #fff; /*Usado quando passa o mouse em cima da seção e na tela atual da navbar*/
+  --branco-escuro: #e5e5e5; /*Usado na em navbar e seções não selecionadas*/
+  --branco-foco: #b3b3b3; /*Usado na navbar quando passa o mouse em cima*/
 }
 
 @supports (font-variation-settings: normal) {
@@ -20,231 +23,147 @@
   }
 }
 
-
-
-body {
-    background-color: #212121;
-    font-family: Inter, sans-serif;
-    margin: 0;
+html {
+  scroll-behavior: smooth;
 }
 
-
+body {
+  background-color: var(--background);
+  font-family: Inter, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
 
 .paragraph {
-    color: #f5f5f5;
-    font-size: 1rem;
+  color: #f5f5f5;
+  font-size: 1rem;
 }
 
 /* Estiliza as seções da página */
 section {
-    display: flex; /* Usa Flexbox para layout */
-    flex-direction: column; /* Alinha os itens na vertical */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
-    justify-content: space-between;
+  display: flex; /* Usa Flexbox para layout */
+  flex-direction: column; /* Alinha os itens na vertical */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
+  justify-content: space-between;
 }
 
 /* Estiliza os inputs dentro das seções */
 section input {
-    width: 200px; /* Largura dos inputs */
-    border: none; /* Remove a borda padrão */
-    padding: 1rem; /* Espaçamento interno */
-    border-radius: 1.5rem; /* Borda arredondada */
-    margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
-    color: #45474B; /* Cor do texto */
-    font-size: 1rem; /* Tamanho da fonte */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
+  width: 200px; /* Largura dos inputs */
+  border: none; /* Remove a borda padrão */
+  padding: 1rem; /* Espaçamento interno */
+  border-radius: 1.5rem; /* Borda arredondada */
+  margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
+  color: #45474b; /* Cor do texto */
+  font-size: 1rem; /* Tamanho da fonte */
+  box-sizing: border-box; /* Inclui padding e border na largura total */
 }
-
 
 /* Estiliza os botões dentro das seções */
 section button {
-    margin-top: 80px;
-    width: 200px;
-    padding: 0.8rem 4rem; /* Espaçamento interno do botão */
-    border: none; /* Remove a borda padrão */
-    border-radius: 1.5rem; /* Borda arredondada */
-    background-color: #414c50; /* Cor de fundo do botão */
-    color: #f5f5f5; /* Cor do texto do botão */
-    font-size: 1rem; /* Tamanho da fonte */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  margin-top: 80px;
+  width: 200px;
+  padding: 0.8rem 4rem; /* Espaçamento interno do botão */
+  border: none; /* Remove a borda padrão */
+  border-radius: 1.5rem; /* Borda arredondada */
+  background-color: #414c50; /* Cor de fundo do botão */
+  color: #f5f5f5; /* Cor do texto do botão */
+  font-size: 1rem; /* Tamanho da fonte */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
 
 /* Adiciona efeito hover ao botão de pesquisa */
 section button:hover {
-    background-color: #39ace7; /* Muda a cor de fundo ao passar o mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+  background-color: #39ace7; /* Muda a cor de fundo ao passar o mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
 }
 
 .buttons-align {
-    display: flex;
-    flex-direction: row;
-    margin-top: 1rem;
-    padding: 1rem;
-    gap: 10rem;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  padding: 1rem;
+  gap: 10rem;
 }
 
 .resume-button-below {
-    margin-top: 20px;
-    margin-bottom: 4rem;
-}
-
-/* Estiliza a caixa de resultados da pesquisa */
-.resultados-pesquisa {
-    width: 60rem; /* Largura máxima da caixa de resultados */
-    margin-top: 2rem; /* Espaçamento acima da caixa de resultados */
-    padding: 1rem; /* Espaçamento interno */
-    border-radius: 0.6rem; /* Borda arredondada */
-    margin-bottom: 5rem;
-}
-
-/* Estiliza cada item de resultado */
-.item-resultado {
-    opacity: 0; /* Começa invisível */
-    animation: fadeIn 1s ease forwards;
-    display: flex;
-    align-items: center;
-    background: #2d383c; /* Cor de fundo dos itens */
-    border-radius: 0.6rem; /* Borda arredondada */
-    padding: 1rem; /* Espaçamento interno */
-    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-}
-
-.imagem-projeto {
-    width: 150px;
-    height: auto;
-    object-fit: cover;
-    aspect-ratio: 1/1;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    border-radius: 20%
-}
-
-.info-projeto {
-    flex: 1;
-}
-
-/* Estiliza os títulos dentro dos itens de resultado */
-.item-resultado h2 {
-    font-size: 1.5rem; /* Tamanho da fonte */
-    color: #39ace7; /* Cor do texto */
-    margin-right: 2rem;
-    margin-left: 1rem;
-}
-
-/* Estiliza os links dentro dos itens de resultado */
-.item-resultado a {
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #39ace7; /* Cor do texto dos links */
-}
-
-/* Estiliza os links quando são passados o mouse sobre */
-.item-resultado a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-}
-
-/* Estiliza a descrição meta dentro dos itens de resultado */
-.descricao-meta {
-    color: #f5f5f5; /* Cor do texto */
-    margin: 0.5rem 0; /* Margem acima e abaixo */
-    margin-right: 2rem;
-    margin-left: 1rem;
-}
-
-.icon-group {
-    display: flex;
-    flex-direction: column; /* Organiza os ícones um acima do outro */
-    gap: 10px; /* Espaçamento vertical entre os ícones */
-    margin-top: 10px; /* Espaçamento entre os ícones e a descrição */
+  margin-top: 20px;
+  margin-bottom: 4rem;
 }
 
 .icon-container {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
 
 .icon-container a {
-    color: #f5f5f5;
-    font-size: 25px;
-    transition: transform 0.3;
+  color: #f5f5f5;
+  font-size: 25px;
+  transition: transform 0.3;
 }
 
 .icon-container a:hover {
-    transform: scale(1.5); /*Animação com mouse*/
-    color: #39ace7; /*Cor com mouse*/
+  transform: scale(1.5); /*Animação com mouse*/
+  color: #39ace7; /*Cor com mouse*/
 }
 
 /* Estiliza o rodapé da página */
 footer {
-    position:relative; /* Posiciona o rodapé */
-    bottom: 0; /* Alinha ao fundo da página */
-    width: 100%; /* Largura total da página */
-    padding: 1rem; /* Espaçamento interno */
-    height: 60px;
-    background: #192428; /* Cor de fundo do rodapé */
-    color: #FFFFFF; /* Cor do texto */
-    text-align: center; /* Alinha o texto ao centro */
-    font-size: 1rem; /* Tamanho da fonte */
-    z-index: 100;
+  position: relative; /* Posiciona o rodapé */
+  bottom: 0; /* Alinha ao fundo da página */
+  width: 100%; /* Largura total da página */
+  padding: 1rem; /* Espaçamento interno */
+  height: 60px;
+  background: #192428; /* Cor de fundo do rodapé */
+  color: #ffffff; /* Cor do texto */
+  text-align: center; /* Alinha o texto ao centro */
+  font-size: 1rem; /* Tamanho da fonte */
+  z-index: 100;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Animação */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-/* efeito cursor */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #f5f5f5; }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*Responsividade*/
 @media (max-width: 768px) {
-    body {
-        overflow: scroll;
-    }
-    
-    .home{
-        flex-direction: column;
-        padding: 0 5%;
-    }
+  body {
+    overflow: scroll;
+  }
 
-    .home-content h1{
-        font-size: 2rem;
-    }
+  .home {
+    flex-direction: column;
+    padding: 0 5%;
+  }
 
-    .home-content h2{
-        font-size: 1.5rem;
-    }
+  .home-content h1 {
+    font-size: 2rem;
+  }
 
-    
-    .home-content h3{
-        font-size: 1.5rem;
-    }
+  .home-content h2 {
+    font-size: 1.5rem;
+  }
 
+  .home-content h3 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
-    body {
-        overflow: scroll;
-    }
+  body {
+    overflow: scroll;
+  }
 
-    .home-content h1 {
-        font-size: 1.8rem;
-    }
+  .home-content h1 {
+    font-size: 1.8rem;
+  }
 }

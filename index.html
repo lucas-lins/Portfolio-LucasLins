@@ -64,27 +64,77 @@
         </div>
     </div>
 
-    <a id="more" href="#projects">
-        <span id="more">see more</span>
-    </a>
+    <div class="scroll-link-container">
+        <a href="#experience" class="scroll-link">
+            Ver mais
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </div>
 
-    <section class="experience">
+    <section class="experience" id="experience">
+        <div>
+            <div class="job">
+                <span class="job-year">2024</span>
+                <h3 class="enterprise">Z.RO Bank</h3>
+                <h3 class="enterprise">Software Development and QA Intern</h3>
+                <p class="description">I created automatic template emails with HTML and CSS, supported release quality control, and conducted functional, exploratory, and interface testing. I also integrated external APIs, maintained automated tests with Jest, and developed and refined internal API endpoints.</p>
+                <ul class="skills">
+                    <li>TypeScript</li>
+                    <li>Nest.js</li>
+                    <li>Node.js</li>
+                    <li>Swagger</li>
+                    <li>Postman</li>
+                    <li>Git</li>
+                </ul>
+            </div>
 
+            <div class="job">
+                <span class="job-year">2022</span>
+                <h3 class="enterprise">TCE-PE</h3>
+                <h3 class="enterprise">Software Testing Intern</h3>
+                <p class="description">I performed manual and automated testing with Cypress and Gherkin, documented test cases and requirements, managed tests with Squash, and monitored quality metrics through reports. I also contributed to process improvements and created templates for test documentation.</p>
+                <ul class="skills">
+                    <li>Cypress</li>
+                    <li>Gherkin</li>
+                    <li>Git</li>
+                    <li>e2e test</li>
+                    <li>BPM</li>
+                    <li>Squash TM</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <span class="job-year">2022</span>
+                <h3 class="enterprise">SOPECE</h3>
+                <h3 class="enterprise">IT Support Intern</h3>
+                <p class="description">I provided technical support and computer maintenance, managed the academic system and network infrastructure, and assisted users through in-person, phone, and online support.</p>
+                <ul class="skills">
+                    <li>Technical Support</li>
+                    <li>Computer Maintenance</li>
+                    <li>Network Administration</li>
+                    <li>Help Desk</li>
+                    <li>User Support</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <span class="job-year">2015</span>
+                <h3 class="enterprise">SICREDI Recife</h3>
+                <h3 class="enterprise">Administrative Assistant Trainee</h3>
+                <p class="description">I supported administrative activities by managing both physical and digital files, organizing documents, controlling office supplies, and assisting the public in person.</p>
+                <ul class="skills">
+                    <li>File Management</li>
+                    <li>Inventory Control</li>
+                    <li>Customer Service</li>
+                    <li>Administrative Support</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section class="projects" id="projects">
-        <div class="buttons-align">
-            <button onclick="buscaProjetos()">Projects</button>
-            <button onclick="buscaPesquisas()">Researches</button>
-            <button onclick="buscaTudo()">All</button>
-        </div>
 
-        <div class="resultados-pesquisa" id="resultados-pesquisa"></div>
     </section>
-
-
-    <script src="/src/portfolio.js"></script>
-    <script src="/src/app.js"></script>
 
 </body>
 
