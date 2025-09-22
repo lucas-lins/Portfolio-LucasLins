@@ -2,10 +2,11 @@
   display: flex;
   gap: 4rem;
   align-items: center;
-  padding: 8rem 20% 10rem 20%;
+  padding: 4rem 20% 4rem 20%;
   margin: 0 auto;
   font-family: Inter, sans-serif;
   max-width: 100vw;
+  background-color: var(--background-darker);
 }
 
 .job {

@@ -4,7 +4,7 @@ header {
   width: 100%;
   padding: 20px 20%;
   height: 60px;
-  background: rgba(18, 18, 18, 0.8);
+  background: rgba(8, 8, 8, 0.8);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   display: flex;
@@ -18,7 +18,7 @@ header {
 .name {
   position: relative;
   font-size: 25px;
-  color: #39ace7;
+  color: var(--azul);
   text-decoration: none;
   font-weight: 600;
 }
@@ -39,5 +39,5 @@ header {
 
 .nav a:hover,
 .nav a.active {
-  color: #39ace7;
+  color: var(--azul);
 }

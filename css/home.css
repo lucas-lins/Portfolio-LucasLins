@@ -29,7 +29,7 @@
 }
 
 .home-content h1 span {
-  color: #39ace7;
+  color: var(--azul);
 }
 
 .home-content h1 {
@@ -42,7 +42,7 @@
 
 .home-content h2 {
   font-size: 1.6rem;
-  color: #39ace7;
+  color: var(--azul);
   margin-bottom: 0.2rem;
   margin-top: 0.2rem;
 }
@@ -70,11 +70,12 @@
 
 .home-icon-container a:hover {
   transform: scale(1.5); /*Animação com mouse*/
-  color: #39ace7; /*Cor com mouse*/
+  color: var(--azul); /*Cor com mouse*/
 }
 
 .scroll-link-container {
   text-align: center;
+  margin: 0 0 4rem 0;
 }
 
 .scroll-link {
@@ -93,10 +94,10 @@
 }
 
 .scroll-link:hover {
-  color: #39ace7;
+  color: var(--azul);
 }
 
 .scroll-link:hover i {
   transform: translateY(3px);
-  color: #39ace7;
+  color: var(--azul);
 }

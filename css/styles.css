@@ -9,7 +9,9 @@
   font-family: Inter, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1;
   --background: #121212; /*Cor do background*/
+  --background-darker: #080808;
   --modal: #1e1e1f;
+  --azul: #39ace7;
   --vermelho: #e50914;
   --vermelho-escuro: #b20710;
   --branco: #fff; /*Usado quando passa o mouse em cima da seção e na tela atual da navbar*/
@@ -32,6 +34,16 @@ body {
   font-family: Inter, sans-serif;
   margin: 0;
   overflow-x: hidden;
+}
+
+.section-head h1 {
+  color: var(--azul);
+  font-size: 3rem;
+}
+
+.section-head h4 {
+  color: #525252;
+  font-size: 1rem;
 }
 
 .paragraph {
@@ -75,7 +87,7 @@ section button {
 
 /* Adiciona efeito hover ao botão de pesquisa */
 section button:hover {
-  background-color: #39ace7; /* Muda a cor de fundo ao passar o mouse */
+  background-color: var(--azul); /* Muda a cor de fundo ao passar o mouse */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
 }
 
@@ -106,7 +118,7 @@ section button:hover {
 
 .icon-container a:hover {
   transform: scale(1.5); /*Animação com mouse*/
-  color: #39ace7; /*Cor com mouse*/
+  color: var(--azul); /*Cor com mouse*/
 }
 
 /* Estiliza o rodapé da página */
