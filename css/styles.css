@@ -4,6 +4,10 @@
 @import "./home.css";
 @import "./experience.css";
 @import "./projects.css";
+@import "./education.css";
+@import "./papers.css";
+@import "./footer.css";
+@import "./contact.css";
 
 :root {
   font-family: Inter, sans-serif;
@@ -12,8 +16,7 @@
   --background-darker: #080808;
   --modal: #1e1e1f;
   --azul: #39ace7;
-  --vermelho: #e50914;
-  --vermelho-escuro: #b20710;
+  --verde: #00ff85;
   --branco: #fff; /*Usado quando passa o mouse em cima da seção e na tela atual da navbar*/
   --branco-escuro: #e5e5e5; /*Usado na em navbar e seções não selecionadas*/
   --branco-foco: #b3b3b3; /*Usado na navbar quando passa o mouse em cima*/
@@ -37,6 +40,7 @@ body {
 }
 
 .section-head h1 {
+  display: block;
   color: var(--azul);
   font-size: 3rem;
 }
@@ -119,20 +123,6 @@ section button:hover {
 .icon-container a:hover {
   transform: scale(1.5); /*Animação com mouse*/
   color: var(--azul); /*Cor com mouse*/
-}
-
-/* Estiliza o rodapé da página */
-footer {
-  position: relative; /* Posiciona o rodapé */
-  bottom: 0; /* Alinha ao fundo da página */
-  width: 100%; /* Largura total da página */
-  padding: 1rem; /* Espaçamento interno */
-  height: 60px;
-  background: #192428; /* Cor de fundo do rodapé */
-  color: #ffffff; /* Cor do texto */
-  text-align: center; /* Alinha o texto ao centro */
-  font-size: 1rem; /* Tamanho da fonte */
-  z-index: 100;
 }
 
 @keyframes fadeIn {

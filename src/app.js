@@ -1,9 +1,9 @@
-const section = document.getElementById('resultados-pesquisa');
+const section = document.getElementById("resultados-pesquisa");
 
-function buscaProjetos(limpar=true){
-    if(limpar==true) section.innerHTML = '';
-    for(let dado of projects){
-        section.innerHTML += `
+function buscaProjetos(limpar = true) {
+  if (limpar == true) section.innerHTML = "";
+  for (let dado of projects) {
+    section.innerHTML += `
         <div class="item-resultado">
             <img src="${dado.imagem}" alt="${dado.titulo}" class="imagem-projeto">
             <div class="info-projeto">
@@ -25,13 +25,13 @@ function buscaProjetos(limpar=true){
                 </div>
             </div>
         </div>`;
-    }
+  }
 }
 
-function buscaPesquisas(limpar=true){
-    if(limpar==true) section.innerHTML = '';
-    for(let dado of researches){
-        section.innerHTML += `
+function buscaPesquisas(limpar = true) {
+  if (limpar == true) section.innerHTML = "";
+  for (let dado of researches) {
+    section.innerHTML += `
         <div class="item-resultado">
             <img src="${dado.imagem}" alt="${dado.titulo}" class="imagem-projeto">
             <div class="info-projeto">
@@ -48,16 +48,16 @@ function buscaPesquisas(limpar=true){
                 </div>
                 <div class="icon-container">
                     <a href=${dado.lattes} target="_blank">
-                        <i class="fas fa-graduation-cap"></i>
+                        <i class="ai ai-lattes"></i>
                     </a>
                 </div>
             </div>
         </div>`;
-    }
+  }
 }
 
-function buscaTudo(){
-    section.innerHTML = '';
-    buscaProjetos(false);
-    buscaPesquisas(false);
+function buscaTudo() {
+  section.innerHTML = "";
+  buscaProjetos(false);
+  buscaPesquisas(false);
 }
