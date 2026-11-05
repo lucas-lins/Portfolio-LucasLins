@@ -1,6 +1,6 @@
 {
   "redirects": [
-    { "source": "/resume.html",   "destination": "/Assets/pdfs/Lucas-Lins-CV-pt.pdf", "permanent": true },
+    { "source": "/resume.html",   "destination": "/Assets/pdfs/Lucas%20Lins%20-%20Resume.pdf", "permanent": true },
     { "source": "/projects.html", "destination": "/#projects", "permanent": true }
   ]
 }

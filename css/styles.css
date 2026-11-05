@@ -12,14 +12,20 @@
 :root {
   font-family: Inter, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1;
-  --background: #121212; /*Cor do background*/
-  --background-darker: #080808;
-  --modal: #1e1e1f;
-  --azul: #39ace7;
-  --verde: #00ff85;
-  --branco: #fff; /*Usado quando passa o mouse em cima da seção e na tela atual da navbar*/
-  --branco-escuro: #e5e5e5; /*Usado na em navbar e seções não selecionadas*/
-  --branco-foco: #b3b3b3; /*Usado na navbar quando passa o mouse em cima*/
+  --bg: #121212;
+  --surface: #080808;
+  --card: #1e1e1f;
+  --accent: #39ace7;
+  --text: #f5f5f5;
+  --text-muted: #a3a3a3;
+  --on-accent: #06121a;
+  --tag-bg: #f5f5f5;
+  --tag-text: #06121a;
+  --border: #3c3f44;
+  --header-bg: rgba(8, 8, 8, 0.8);
+  --shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  --radius-card: 0.8rem;
+  --space-section: 4rem;
 }
 
 @supports (font-variation-settings: normal) {
@@ -33,79 +39,45 @@ html {
 }
 
 body {
-  background-color: var(--background);
+  background-color: var(--bg);
+  color: var(--text);
   font-family: Inter, sans-serif;
   margin: 0;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
-.section-head h1 {
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  padding: 0.75rem 1rem;
+  background: var(--card);
+  color: var(--text);
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.section-head h2 {
   display: block;
-  color: var(--azul);
+  color: var(--accent);
   font-size: 3rem;
 }
 
-.section-head h4 {
-  color: #525252;
+.section-head .section-intro {
+  color: var(--text-muted);
   font-size: 1rem;
 }
 
-.paragraph {
-  color: #f5f5f5;
-  font-size: 1rem;
-}
-
-/* Estiliza as seções da página */
 section {
   display: flex; /* Usa Flexbox para layout */
   flex-direction: column; /* Alinha os itens na vertical */
   align-items: center; /* Centraliza os itens horizontalmente */
   margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
   justify-content: space-between;
-}
-
-/* Estiliza os inputs dentro das seções */
-section input {
-  width: 200px; /* Largura dos inputs */
-  border: none; /* Remove a borda padrão */
-  padding: 1rem; /* Espaçamento interno */
-  border-radius: 1.5rem; /* Borda arredondada */
-  margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
-  color: #45474b; /* Cor do texto */
-  font-size: 1rem; /* Tamanho da fonte */
-  box-sizing: border-box; /* Inclui padding e border na largura total */
-}
-
-/* Estiliza os botões dentro das seções */
-section button {
-  margin-top: 80px;
-  width: 200px;
-  padding: 0.8rem 4rem; /* Espaçamento interno do botão */
-  border: none; /* Remove a borda padrão */
-  border-radius: 1.5rem; /* Borda arredondada */
-  background-color: #414c50; /* Cor de fundo do botão */
-  color: #f5f5f5; /* Cor do texto do botão */
-  font-size: 1rem; /* Tamanho da fonte */
-  cursor: pointer; /* Muda o cursor para indicar que é clicável */
-}
-
-/* Adiciona efeito hover ao botão de pesquisa */
-section button:hover {
-  background-color: var(--azul); /* Muda a cor de fundo ao passar o mouse */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
-}
-
-.buttons-align {
-  display: flex;
-  flex-direction: row;
-  margin-top: 1rem;
-  padding: 1rem;
-  gap: 10rem;
-}
-
-.resume-button-below {
-  margin-top: 20px;
-  margin-bottom: 4rem;
 }
 
 .icon-container {
@@ -115,14 +87,14 @@ section button:hover {
 }
 
 .icon-container a {
-  color: #f5f5f5;
+  color: var(--text);
   font-size: 25px;
-  transition: transform 0.3;
+  transition: transform 0.3s;
 }
 
 .icon-container a:hover {
   transform: scale(1.5); /*Animação com mouse*/
-  color: var(--azul); /*Cor com mouse*/
+  color: var(--accent); /*Cor com mouse*/
 }
 
 @keyframes fadeIn {
@@ -138,31 +110,106 @@ section button:hover {
 
 /*Responsividade*/
 @media (max-width: 768px) {
-  body {
-    overflow: scroll;
-  }
-
   .home {
     flex-direction: column;
-    padding: 0 5%;
+    grid-template-columns: 1fr;
+    padding: 7rem 5% 4rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    gap: 2rem;
+  }
+
+  .header {
+    height: auto;
+    min-height: 60px;
+    padding: 12px 5%;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.3rem 0.8rem;
+    margin-left: 0;
+  }
+
+  .nav a {
+    font-size: 0.85rem;
+    margin-left: 0;
+  }
+
+  .experience,
+  .projects,
+  .education,
+  .papers,
+  .contact {
+    max-width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+  }
+
+  .projects-container {
+    width: 100%;
+    column-count: 2;
+  }
+
+  .project {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    break-inside: avoid;
+  }
+
+  .project-image {
+    width: 100%;
+    max-width: 15rem;
+  }
+
+  .education-container {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  }
+
+  .subject {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-container,
+  .paper {
+    grid-template-columns: 1fr;
+  }
+
+  .paper-image {
+    width: min(15rem, 100%);
+    max-width: 100%;
+  }
+
+  footer {
+    height: auto;
+    min-height: 60px;
+    padding: 20px 5%;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 
   .home-content h1 {
     font-size: 2rem;
   }
 
-  .home-content h2 {
+  .home-content .role {
     font-size: 1.5rem;
   }
 
-  .home-content h3 {
+  .home-content .greeting {
     font-size: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  body {
-    overflow: scroll;
+  .projects-container {
+    column-count: 1;
   }
 
   .home-content h1 {

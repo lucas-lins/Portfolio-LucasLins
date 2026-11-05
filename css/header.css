@@ -4,7 +4,7 @@ header {
   width: 100%;
   padding: 20px 20%;
   height: 60px;
-  background: rgba(8, 8, 8, 0.8);
+  background: var(--header-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   display: flex;
@@ -12,13 +12,13 @@ header {
   align-items: center;
   z-index: 100;
   box-sizing: border-box;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: var(--shadow);
 }
 
 .name {
   position: relative;
   font-size: 25px;
-  color: var(--azul);
+  color: var(--accent);
   text-decoration: none;
   font-weight: 600;
 }
@@ -30,7 +30,7 @@ header {
 
 .nav a {
   font-size: 18px;
-  color: #f5f5f5;
+  color: var(--text);
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
@@ -39,5 +39,5 @@ header {
 
 .nav a:hover,
 .nav a.active {
-  color: var(--azul);
+  color: var(--accent);
 }
