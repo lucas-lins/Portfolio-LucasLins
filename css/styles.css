@@ -126,15 +126,11 @@ section {
   }
 
   .nav {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.3rem 0.8rem;
-    margin-left: 0;
+    gap: 0.3rem 0.4rem;
   }
 
   .nav a {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
     margin-left: 0;
   }
 
