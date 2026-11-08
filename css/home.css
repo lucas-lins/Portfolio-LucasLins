@@ -1,6 +1,6 @@
 .home {
     display: grid;
-    grid-template-columns: 360px minmax(0, 760px);
+    grid-template-columns: minmax(0, 1fr);
     justify-content: center;
     align-items: center;
 
@@ -9,7 +9,7 @@
     width: 100%;
     max-width: 1600px;
     box-sizing: border-box;
-    padding: 8rem 3rem 5rem;
+    padding: 8rem 0 5rem;
     margin: 0 auto;
 
     font-family: Inter, sans-serif;
@@ -229,7 +229,7 @@
 
 @media (max-width: 480px) {
     .home {
-        width: 92%;
+        width: 100%;
         padding-top: 6rem;
     }
 
