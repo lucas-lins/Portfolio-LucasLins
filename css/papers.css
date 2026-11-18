@@ -1,51 +1,110 @@
 .papers {
-  gap: var(--space-section);
-  align-items: center;
-  padding: var(--space-section) 20% var(--space-section) 20%;
-  font-family: Inter, sans-serif;
-  max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 4rem 0;
+    margin: 0;
+
+    font-family: Inter, sans-serif;
+    background: transparent;
+}
+
+.papers .section-head {
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.papers .section-head h2 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.papers .section-intro {
+    max-width: 700px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
 }
 
 .papers-container {
-  gap: 4rem;
-  align-items: center;
-  font-family: Inter, sans-serif;
-  max-width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    width: 100%;
 }
 
 .paper {
-  display: grid;
-  grid-template-columns: 0.6fr 2fr;
-  background-color: var(--card);
-  padding: 1rem;
-  gap: 0 1.2rem;
-  border-radius: var(--radius-card);
-  position: relative;
-  margin-bottom: 1rem;
-  box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+
+    min-width: 0;
+    padding: 1.5rem;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card);
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
 }
 
-.paper-image {
-  max-width: 15rem;
-  width: 15rem;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  border-radius: var(--radius-card);
-  overflow: hidden;
-  box-shadow: var(--shadow);
+.paper:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
 }
 
 .paper-title {
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: var(--text);
-  margin: 0.6rem;
+    color: var(--text);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.4;
+
+    margin: 0;
 }
 
 .paper-description {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  line-height: 1.4;
-  margin: 0.6rem;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    line-height: 1.65;
+
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    .papers-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .papers {
+        padding: 3rem 0;
+    }
+
+    .papers-container {
+        gap: 1rem;
+    }
+
+    .paper {
+        padding: 1.2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .paper {
+        transition: none;
+    }
+
+    .paper:hover {
+        transform: none;
+    }
 }

@@ -173,14 +173,8 @@ section {
     box-sizing: border-box;
   }
 
-  .contact-container,
-  .paper {
+  .contact-container {
     grid-template-columns: 1fr;
-  }
-
-  .paper-image {
-    width: min(15rem, 100%);
-    max-width: 100%;
   }
 
   footer {
