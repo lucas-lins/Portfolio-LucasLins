@@ -7,7 +7,6 @@
 @import "./projects.css";
 @import "./education.css";
 @import "./papers.css";
-@import "./footer.css";
 @import "./contact.css";
 
 :root {
@@ -175,14 +174,6 @@ section {
 
   .contact-container {
     grid-template-columns: 1fr;
-  }
-
-  footer {
-    height: auto;
-    min-height: 60px;
-    padding: 20px 5%;
-    gap: 1rem;
-    flex-wrap: wrap;
   }
 
   .home-content h1 {
