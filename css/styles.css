@@ -10,6 +10,7 @@
 @import "./contact.css";
 
 :root {
+  color-scheme: dark;
   font-family: Inter, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1;
   --bg: #121212;
@@ -23,9 +24,41 @@
   --tag-text: #06121a;
   --border: #3c3f44;
   --header-bg: rgba(8, 8, 8, 0.8);
+  --header-glass-bg: rgba(30, 30, 31, 0.55);
+  --header-glass-border: rgba(255, 255, 255, 0.14);
+  --header-glass-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  --tooltip-bg: rgba(30, 30, 31, 0.85);
+  --tooltip-text: #f2f2f2;
+  --control-selected-bg: rgba(57, 172, 231, 0.18);
   --shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
   --radius-card: 0.8rem;
   --space-section: 4rem;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #e0e9f1;
+  --surface: #f2f2f2;
+  --card: #f2f2f2;
+  --accent: #087eae;
+  --text: #1b2733;
+  --text-muted: #526170;
+  --on-accent: #f2f2f2;
+  --tag-bg: #dceff7;
+  --tag-text: #173a4b;
+  --border: #d3dde5;
+  --header-bg: rgba(255, 255, 255, 0.78);
+  --header-glass-bg: rgba(255, 255, 255, 0.72);
+  --header-glass-border: rgba(23, 42, 56, 0.12);
+  --header-glass-shadow:
+    0 8px 32px rgba(20, 35, 48, 0.14),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  --tooltip-bg: rgba(255, 255, 255, 0.94);
+  --tooltip-text: #1b2733;
+  --control-selected-bg: rgba(8, 126, 174, 0.12);
+  --shadow: rgba(20, 35, 48, 0.1) 0 5px 15px;
 }
 
 @supports (font-variation-settings: normal) {
@@ -117,21 +150,6 @@ section {
     max-width: 100%;
     box-sizing: border-box;
     gap: 2rem;
-  }
-
-  .header {
-    height: auto;
-    min-height: 60px;
-    padding: 12px 5%;
-  }
-
-  .nav {
-    gap: 0.3rem 0.4rem;
-  }
-
-  .nav a {
-    font-size: 1.1rem;
-    margin-left: 0;
   }
 
   .experience,

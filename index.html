@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,6 @@
 
 <body>
     <a class="skip-link" href="#main">Pular para o conteúdo</a>
-
     <header class="header">
         <nav class="nav" aria-label="Navegação principal">
             <a href="#home" class="active" aria-label="Home" title="Home">
@@ -49,6 +48,32 @@
             </a>
         </nav>
     </header>
+    
+    <div class="header-controls">
+        <button type="button" class="preferences-toggle" data-preferences-toggle aria-label="Display settings" aria-expanded="false" aria-controls="preferences-popover" title="Display settings">
+            <i class="fas fa-gear" aria-hidden="true"></i>
+        </button>
+        <div class="preferences-popover" id="preferences-popover" hidden>
+            <div class="preference-section">
+                <span class="preference-label" id="theme-label">Theme</span>
+                <div class="header-control-group" role="group" aria-labelledby="theme-label">
+                    <button type="button" class="header-control-button" data-theme-choice="light" aria-label="Light theme" aria-pressed="false" title="Light theme">
+                        <i class="fas fa-sun" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="header-control-button" data-theme-choice="dark" aria-label="Dark theme" aria-pressed="true" title="Dark theme">
+                        <i class="fas fa-moon" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="preference-section">
+                <span class="preference-label" id="language-label">Language</span>
+                <div class="header-control-group" role="group" aria-labelledby="language-label">
+                    <button type="button" class="header-control-button language-button" data-language-choice="pt" lang="pt-BR" aria-pressed="false" title="Português">PT</button>
+                    <button type="button" class="header-control-button language-button" data-language-choice="en" lang="en" aria-pressed="true" title="English">EN</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main id="main">
         <div class="page-layout">
